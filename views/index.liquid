@@ -7,4 +7,13 @@
   {% endfor %}
 </ul>
 
+    <section>
+      <h2>Squads</h2>
+      <ul>
+        {% for squad in squads %}
+          <li>Squad {{ squad.name }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
 {% render 'partials/foot.liquid', squads: squads %}
