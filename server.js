@@ -1,4 +1,4 @@
-// Importeer het npm package Express (uit de door npm aangemaakte node_modules map)
+  // Importeer het npm package Express (uit de door npm aangemaakte node_modules map)
 // Deze package is geïnstalleerd via `npm install`, en staat als 'dependency' in package.json
 import express from 'express'
 
@@ -46,7 +46,14 @@ app.get('/', async function (request, response) {
 
   // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
   // Geef ook de eerder opgehaalde squad data mee aan de view
-  response.render('index.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
+  response.render('index.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data })
+
+    // response.render('index.liquid', {persons: personResponseJSON.data.map(person => ({
+    //   id: person.id,
+    //   name: person.name,
+    //   birthyear: person.birthyear,
+    //   bio: person.bio
+    //   })), squads: squadResponseJSON.data })
 })
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
