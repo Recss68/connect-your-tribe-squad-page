@@ -1,7 +1,11 @@
 {% render 'partials/head.liquid' %}
 
-<a href="/">Back</a>
+    <a href="/">Back</a>
 
-<h2>{{ person.name }}</h2>
+    <h2>{{ person.name }}</h2>
+    <h3>FDND</h3>
+    <img src="{{person.avatar}}" alt="person-picture">
+    <h3>{{person.bio}}</h3>
+    <h3>{{person.birthdate}}</h3>
 
 {% render 'partials/foot.liquid', squads: squads %}
