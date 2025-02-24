@@ -1,0 +1,15 @@
+{% render 'partials/head.liquid' %}
+
+    <h3>Send your message</h3>
+    <form method="POST">
+        <label for="message">Bericht:
+            <input type="text" name="message">
+        </label>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+
+{% render 'partials/foot.liquid', squads: squads %}
