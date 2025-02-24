@@ -3,14 +3,24 @@
 <h2>Members</h2>
 
 <section class="filters">
-  <button>Sort</button>
-  <button>Filter</button>
+  <details>
+    <summary>Sorteren</summary>
+    <a href="/naam">Sorteer op naam</a>
+    <br>
+    <a href="/geboortejaar">Sorteer op geboortejaar</a>
+  </details>
+    <details>
+    <summary>Filteren</summary>
+    <a href="/squad-1G">Squad 1G</a>
+    <br>
+    <a href="/squad-1H">Squad 1H</a>
+  </details>
 </section  
 
   <section class="cards">
     <ul>
       {% for person in persons %}
-        <li><a href="/detail/{{ person.id }}"><img src="{{person.avatar}} alt="profile-pictures"><br>{{ person.name }}</a></li>
+        <li><a href="/detail/{{ person.id }}"><img src="{{person.avatar}}"><br>{{ person.name }}</a></li>
       {% endfor %}
     </ul>
   </section  
